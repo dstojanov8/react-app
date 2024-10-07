@@ -1,35 +1,29 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
   place-items: center;
   width: 25vw;
   display: grid;
   background-color: #f4f4f4;
-  padding: 20px;
-  padding-top: 15px;
+  padding: 15px 50px 20px 50px;
   border-radius: 5px;
-`
+  margin-top: 10vh;
+`;
 
 export const StyledLabel = styled.label`
   display: block;
   margin-bottom: 10px;
   margin-top: 10px;
   font-weight: bold;
-  color: 'black';
-`
+  color: "black";
+`;
 
 export const StyledInput = styled.input`
   width: -webkit-fill-available;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-`
+`;
 
 export const StyledButton = styled.button`
   width: 10vw;
@@ -44,7 +38,7 @@ export const StyledButton = styled.button`
     opacity: 0.5;
   }
   &:enabled {
-    opacity: 1.0;
+    opacity: 1;
   }
   opacity: 1;
-`
+`;

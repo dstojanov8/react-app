@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
-import App from './App';
-import Home from './components/home-page/Home';
+import App from "./App";
+import Home from "./components/home-page/Home";
 import PeopleTable from "./components/people-table/PeopleTable";
 import LoginForm from "./components/login-form/LoginForm";
 import AddPeople from "./components/add-people/AddPeople";
@@ -9,10 +9,11 @@ import NotFoundRedirect from "./components/not-found-redirect/NotFoundRedirect";
 import RegisterForm from "./components/register-form/RegisterForm";
 import EditPeople from "./components/edit-people/EditPeople";
 import PeopleTree from "./components/people-tree/PeopleTree";
+import AccountDetails from "./components/account-details/AccountDetails";
 
 const routes: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
@@ -23,20 +24,24 @@ const routes: RouteObject[] = [
             element: <Home />,
           },
           {
-            path: 'my-users',
+            path: "my-users",
             element: <PeopleTable />,
           },
           {
-            path: 'my-users/:id',
-            element: <EditPeople /> // New User Details route
+            path: "my-users/:id",
+            element: <EditPeople />, // New User Details route
           },
           {
-            path: 'tree',
+            path: "workflow",
             element: <PeopleTree />,
           },
           {
-            path: 'add-user',
-            element: <AddPeople />
+            path: "add-user",
+            element: <AddPeople />,
+          },
+          {
+            path: "account-details",
+            element: <AccountDetails />,
           },
           // {
           //   path: 'user/:id',
@@ -50,16 +55,16 @@ const routes: RouteObject[] = [
         ],
       },
       {
-        path: 'login',
-        element: <LoginForm />
+        path: "login",
+        element: <LoginForm />,
       },
       {
-        path: 'register',
-        element: <RegisterForm />
+        path: "register",
+        element: <RegisterForm />,
       },
       {
-        path: '*',
-        element: <NotFoundRedirect />
+        path: "*",
+        element: <NotFoundRedirect />,
       },
     ],
   },
